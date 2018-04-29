@@ -5,7 +5,7 @@ ADD ./index.html ./
 #installing system packagees, fixing uwsgi config file and changing servername
 RUN apt-get update && apt-get install -y zip logrotate dnsutils \
     && sed -i 's/wrong.py/main.py/g' uwsgi.ini \
-    && sed -i 's/localhost/internship.macpaw.io/g' /etc/nginx/conf.d/nginx.conf
+    && sed -i 's/localhost/localhost internship.macpaw.io/g' /etc/nginx/conf.d/nginx.conf
 
 #add script that shows ip 
 ADD ./get_ip.sh ./
